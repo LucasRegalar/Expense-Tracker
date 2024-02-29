@@ -1,0 +1,418 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-text: #e4e6eb;
+    --secondary-text: #b0b3b8;
+    --primary-background: #18191a;
+    --primary-card: #242526;
+    --secondary-card: #3a3b3c;
+    --highlight: #2CBCCB; 
+    --main-red: #d93879;
+    --main-green: #28BE8C;
+}
+
+@font-face {
+    font-family: AgenorNeue;
+    src: url(../fonts/AgenorNeue-Regular.otf);
+}
+
+html {
+    font-size: 100%;
+    font-family: AgenorNeue;
+}
+
+
+body {
+    background-color: black;
+    color: var(--primary-text);
+    overflow: hidden;
+}
+
+.red-text {
+    color: var(--main-red);
+}
+
+.green-text {
+    color: var(--main-green);
+}
+
+.secondary-text-color {
+    color: var(--secondary-text);
+}
+
+.main-layout {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--primary-background);
+    border: var(--secondary-card) solid 1px;
+    border-radius: 1rem;
+    margin: 25px;
+    padding: 1.5rem;
+    padding-top: 2.5rem;
+    height: 600px;
+}
+
+section {
+    width: 70vw;  
+    max-width: 1060px;
+}
+.inner-card {
+    background-color: var(--primary-card);
+    border: var(--secondary-card) solid 1px;
+    border-radius: 0.5rem;
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+p, li {
+    font-size: 0.9rem;
+}
+
+button {
+    color: var(--primary-text);
+    font-family: AgenorNeue;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+i {
+    width: 0.5rem;
+    margin-right: 1rem;
+    text-align: center;
+}
+
+.i--less-margin {
+    margin: 0.5rem;
+}
+
+button:hover {
+    color: white;
+    transition: all 0.5s;
+}
+
+/* NAVIGATION */
+
+.card__side-navigation-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+    margin-right: 0;
+}
+
+.profile-information {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.profile-information__name {
+    margin: 0.3rem;
+}
+
+.profile-information__profile-image {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.button--styleless {
+    background: none;
+    border: none;
+}
+
+.button--nav:hover {
+    margin-left: 0.5rem;
+    transition: all 0.5s;
+}
+
+.button--nav:not(:hover) {
+    margin-left: 0;
+    transition: all 0.3s;
+}
+
+/* DASHBOARD */
+
+.card--split-2-clmns {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card--split-2-clmns__left-clmn {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0.6rem;
+}
+
+.card--split-2-clmns__right-clmn {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.6rem;
+    padding-top: 1.8rem;
+}
+
+.inner-card__chart {
+    max-height: 49%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-card__dashboard-total-card {
+    width: 48%;
+    min-width: 170px;
+    height: 6rem;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+}
+
+.inner-card__dashboard-total-card-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.inner-card__dashboard-total-card--centered-text {
+    text-align: center;
+}
+
+.inner-card__dashboard-total-card__big-font {
+    font-size: 2.5rem;
+}
+
+.inner-card__recent-history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.6rem 0rem;
+    width: 22rem;
+    height: 3rem;
+    padding: 0 1rem;
+}
+
+.card__min-max-heading {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.inner-card__salary-expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.6rem 0rem;
+    width: 22rem;
+    height: 3rem;
+    padding: 0 1rem;
+}
+
+/* TRANSACTIONS */
+
+.inner-card__transaction-overview-list {
+    width: 100%;
+    height: 26em;
+    overflow: auto;
+    scrollbar-color: var(--primary-card) var(--primary-background);
+}
+
+.font-size-500 {
+    font-size: 1.5rem;
+}
+
+/* INCOMES & EXPENSES */
+
+.inner-card__big-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 4rem;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+}
+
+.inner-card__big-header h2 {
+    margin-right: 0.5rem;
+    margin-top: 0.4rem;
+}
+
+.inner-card__big-header p {
+    font-size: 2rem;
+    margin-left: 0.5rem;
+}
+
+input, select, textarea {
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 2.2rem;
+    padding: 0 1rem;
+    border-radius: 0.2rem;
+    background-color: var(--primary-background);
+    border: var(--secondary-card) solid 1px;
+    color: var(--primary-text);
+    font-family: AgenorNeue;
+    font-size: 0.9rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  appearance: textfield;
+}
+
+textarea {
+    color: var(--primary-text);
+    padding-top: 0.5rem;
+    resize: none;
+    height: 5rem;
+}
+
+.align-right {
+    display: flex;
+    justify-content: end;
+}
+
+select {
+    width: 60%;
+}
+
+select:invalid,
+select option[value=""] {
+  color: #999999;
+}
+
+select {
+   /* Chrome, Safari, Edge, Opera */
+    -webkit-appearance: none;
+    /* Firefox */
+    appearance: none;
+    text-indent: 1px;
+  }
+
+.inner-card__transaction-item-container {
+    padding: 0.5rem 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.inner-card__transaction-item-container__icon-container {
+    display: flex;
+    align-items: center;
+}
+
+ .inner-card__transaction-item-container__icon-container__inner-container {
+    margin-top: -0.35rem;
+    padding-top: 0;
+}
+
+.i--big {
+    font-size: 2rem;
+    margin-right: 1rem;
+    width: 2rem;
+    text-align: center;
+}
+
+.add-btn {
+    width: 50%;
+    height: 2.2rem;
+    background-color: var(--main-red);
+    border-radius: 2rem;
+    margin-top: 0.5rem;
+    border: none;
+}
+
+.add-btn:hover {
+    color: var(--primary-text);
+    background-color: #c02e69;
+}
+
+.add-btn:not(:hover) {
+    background-color: var(--main-red);
+    transition: all 0.3s;
+}
+
+.inner-card__transaction-list {
+    width: 100%;
+    margin-left: 1.5rem;
+    height: 26em;
+    overflow: auto;
+    scrollbar-color: var(--primary-card) var(--primary-background);
+}
+
+.inner-card__transaction-list__item-heading {
+    display: flex;
+}
+
+.inner-card__transaction-list__item-heading p {
+    margin: 0.5rem;
+   /* margin-top: 0.15rem; */
+}
+
+.inner-card__transaction-item-container p {
+    display: inline;
+    margin-right: 1rem;
+}
+
+.dot {
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    margin: 0.5rem;
+    margin-top: 0.65rem;
+}
+
+.dot--green {
+    background-color: var(--main-green);
+}
+
+.dot--red {
+    background-color: var(--main-red);
+}
+
+.delete-btn {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--primary-text);
+    border: none;
+    font-size: 1.2rem;
+}
